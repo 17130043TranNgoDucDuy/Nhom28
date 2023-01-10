@@ -1,0 +1,761 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required Meta Tags Always Come First -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Title -->
+  <title>VTV | Admin - Chi tiết đơn hàng</title>
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- CSS Implementing Plugins -->
+  <link rel="stylesheet" href="assets\css\vendor.min.css">
+  <link rel="stylesheet" href="assets\vendor\icon-set\style.css">
+
+  <!-- CSS Front Template -->
+  <link rel="stylesheet" href="assets\css\theme.min.css?v=1.0">
+</head>
+
+<body class="footer-offset">
+
+  <script src="assets\vendor\hs-navbar-vertical-aside\hs-navbar-vertical-aside-mini-cache.js"></script>
+
+  <div id="styleSwitcherDropdown" class="hs-unfold-content sidebar sidebar-bordered sidebar-box-shadow"
+    style="width: 35rem;">
+    <div class="card card-lg border-0 h-100">
+      <!-- Footer -->
+      <div class="card-footer">
+        <div class="row gx-2">
+          <div class="col">
+            <button type="button" id="js-builder-reset" class="btn btn-block btn-lg btn-white">
+              <i class="tio-restore"></i> Cài lại
+            </button>
+          </div>
+          <div class="col">
+            <button type="button" id="js-builder-preview" class="btn btn-block btn-lg btn-primary">
+              <i class="tio-visible"></i> Xem trước
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JS Preview mode only -->
+  <div id="headerMain" class="d-none">
+    <header id="header"
+      class="navbar navbar-expand-lg navbar-fixed navbar-height navbar-flush navbar-container navbar-bordered">
+      <div class="navbar-nav-wrap">
+        <div class="navbar-brand-wrapper">
+          <!-- Logo -->
+          <a class="navbar-brand" href="index.html" aria-label="Front">
+            <img class="navbar-brand-logo" src="../images/logo/logo.png" alt="Logo">
+            <img class="navbar-brand-logo-mini" src="../images/logo/logo.png" alt="Logo">
+          </a>
+        </div>
+
+        <div class="navbar-nav-wrap-content-left">
+          <!-- Navbar Vertical Toggle -->
+          <button type="button" class="js-navbar-vertical-aside-toggle-invoker close mr-3">
+            <i class="tio-first-page navbar-vertical-aside-toggle-short-align" data-toggle="tooltip"
+              data-placement="right" title="Thu nhỏ"></i>
+            <i class="tio-last-page navbar-vertical-aside-toggle-full-align"
+              data-template='<div class="tooltip d-none d-sm-block" role="tooltip"><div class="arrow"></div><div class="tooltip-inner"></div></div>'
+              data-toggle="tooltip" data-placement="right" title="Mở rộng"></i>
+          </button>
+          <!-- End Navbar Vertical Toggle -->
+
+          <!-- Search Form -->
+          <div class="d-none d-md-block">
+            <form class="position-relative">
+              <!-- Input Group -->
+              <div
+                class="input-group input-group-merge input-group-borderless input-group-hover-light navbar-input-group">
+                <div class="input-group-prepend">
+                  <div class="input-group-text">
+                    <i class="tio-search"></i>
+                  </div>
+                </div>
+                <input type="search" class="js-form-search form-control" placeholder="Tìm kiếm...">
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- Secondary Content -->
+        <div class="navbar-nav-wrap-content-right">
+          <!-- Navbar -->
+          <ul class="navbar-nav align-items-center flex-row">
+            <li class="nav-item d-md-none">
+              <!-- Search Trigger -->
+              <div class="hs-unfold">
+                <a class="js-hs-unfold-invoker btn btn-icon btn-ghost-secondary rounded-circle" href="javascript:;"
+                  data-hs-unfold-options='{
+                 "target": "#searchDropdown",
+                 "type": "css-animation",
+                 "animationIn": "fadeIn",
+                 "hasOverlay": "rgba(46, 52, 81, 0.1)",
+                 "closeBreakpoint": "md"
+               }'>
+                  <i class="tio-search"></i>
+                </a>
+              </div>
+            </li>
+
+            <li class="nav-item">
+              <!-- Account -->
+              <div class="hs-unfold">
+                <a class="js-hs-unfold-invoker navbar-dropdown-account-wrapper" href="javascript:;"
+                  data-hs-unfold-options='{
+                 "target": "#accountNavbarDropdown",
+                 "type": "css-animation"
+               }'>
+                  <div class="avatar avatar-sm avatar-circle">
+                    <img class="avatar-img" src="../images/test/admin1.jpg" alt="Image Description">
+                    <span class="avatar-status avatar-sm-status avatar-status-success"></span>
+                  </div>
+                </a>
+
+                <div id="accountNavbarDropdown"
+                  class="hs-unfold-content dropdown-unfold dropdown-menu dropdown-menu-right navbar-dropdown-menu navbar-dropdown-account"
+                  style="width: 16rem;">
+                  <div class="dropdown-item-text">
+                    <div class="media align-items-center">
+                      <div class="avatar avatar-sm avatar-dark avatar-circle mr-2">
+                        <img class="avatar-img" src="../images/test/admin1.jpg" alt="Image Description">
+                        <!-- <span class="avatar-initials">A</span> -->
+                      </div>
+                      <div class="media-body">
+                        <span class="card-title h5">Nguyễn Văn A</span>
+                        <span class="card-text">nguyenvana@gmail.com</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">
+                    <span class="text-truncate pr-2" title="Profile &amp; account">Hồ Sơ Tài Khoản</span>
+                  </a>
+                  <a class="dropdown-item" href="#">
+                    <span class="text-truncate pr-2" title="Sign out">Đăng Xuất</span>
+                  </a>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+  </div>
+
+  <div id="headerFluid" class="d-none"></div>
+  <div id="headerDouble" class="d-none"></div>
+
+  <!-- Thanh menu -->
+  <div id="sidebarMain" class="d-none">
+    <aside
+        class="js-navbar-vertical-aside navbar navbar-vertical-aside navbar-vertical navbar-vertical-fixed navbar-expand-xl navbar-bordered  ">
+        <div class="navbar-vertical-container">
+            <div class="navbar-vertical-footer-offset">
+                <div class="navbar-brand-wrapper justify-content-between">
+                    <!-- Logo -->
+                    <a class="navbar-brand" href="index.html" aria-label="Front">
+                        <img class="navbar-brand-logo" src="../images/logo/logo.png" alt="Logo">
+                    </a>
+
+                    <!-- Navbar Vertical Toggle -->
+                    <button type="button"
+                        class="js-navbar-vertical-aside-toggle-invoker navbar-vertical-aside-toggle btn btn-icon btn-xs btn-ghost-dark">
+                        <i class="tio-clear tio-lg"></i>
+                    </button>
+                </div>
+
+                <!-- Content -->
+                <div class="navbar-vertical-content">
+                    <ul class="navbar-nav navbar-nav-lg nav-tabs">
+                        <!-- Dashboards -->
+                        <li class="navbar-vertical-aside-has-menu">
+                            <a class="js-navbar-vertical-aside-menu-link nav-link"
+                                href="../backend/index.html" title="Dashboards">
+                                <i class="tio-home-vs-1-outlined nav-icon"></i>
+                                <span class="navbar-vertical-aside-mini-mode-hidden-elements text-truncate">Trang
+                                    chủ</span>
+                            </a>
+                        </li>
+
+                        <li class="navbar-vertical-aside-has-menu">
+                            <a class="js-navbar-vertical-aside-menu-link nav-link" href="../backend/employee.html"
+                                title="Nhân viên">
+                                <i class="tio-users-switch nav-icon"></i>
+                                <span class="navbar-vertical-aside-mini-mode-hidden-elements text-truncate">Nhân
+                                    viên</span>
+                            </a>
+                        </li>
+
+                        <li class="navbar-vertical-aside-has-menu ">
+                            <a class="js-navbar-vertical-aside-menu-link nav-link" href="../backend/customer.html"
+                                title="Khách hàng">
+                                <i class="tio-user-big-outlined nav-icon"></i>
+                                <span class="navbar-vertical-aside-mini-mode-hidden-elements text-truncate">Khách
+                                    hàng</span>
+                            </a>
+                        </li>
+
+                        <li class="navbar-vertical-aside-has-menu">
+                            <a class="js-navbar-vertical-aside-menu-link nav-link" href="../backend/banner.html"
+                                title="Quảng cáo">
+                                <i class="tio-panorama-image nav-icon"></i>
+                                <span class="navbar-vertical-aside-mini-mode-hidden-elements text-truncate">Quảng
+                                    cáo</span>
+                            </a>
+                        </li>
+
+                        <li class="navbar-vertical-aside-has-menu ">
+                            <a class="js-navbar-vertical-aside-menu-link nav-link" href="../backend/product.html"
+                                title="Quảng cáo">
+                                <i class="tio-motocycle nav-icon"></i>
+                                <span class="navbar-vertical-aside-mini-mode-hidden-elements text-truncate">Sản
+                                    phẩm</span>
+                            </a>
+                        </li>
+
+                        <li class="navbar-vertical-aside-has-menu show">
+                            <a class="js-navbar-vertical-aside-menu-link nav-link" href="../backend/order.html"
+                                title="Đơn hàng">
+                                <i class="tio-receipt-outlined nav-icon"></i>
+                                <span class="navbar-vertical-aside-mini-mode-hidden-elements text-truncate">Đơn
+                                    hàng</span>
+                            </a>
+                        </li>
+
+                        <li class="navbar-vertical-aside-has-menu ">
+                            <a class="js-navbar-vertical-aside-menu-link nav-link" href="../backend/review.html"
+                                title="Đánh giá">
+                                <i class="tio-comment-vs-outlined nav-icon"></i>
+                                <span class="navbar-vertical-aside-mini-mode-hidden-elements text-truncate">Đánh
+                                    giá</span>
+                            </a>
+                        </li>
+
+                        <li class="navbar-vertical-aside-has-menu ">
+                            <a class="js-navbar-vertical-aside-menu-link nav-link" href="../backend/statistic.html"
+                                title="Thống kê">
+                                <i class="tio-chart-bar-1 nav-icon"></i>
+                                <span class="navbar-vertical-aside-mini-mode-hidden-elements text-truncate">Thống
+                                    kê</span>
+                            </a>
+                        </li>
+
+                        <li class="navbar-vertical-aside-has-menu ">
+                            <a class="js-navbar-vertical-aside-menu-link nav-link" href="../backend/setting.html"
+                                title="Cấu hình">
+                                <i class="tio-settings nav-icon"></i>
+                                <span class="navbar-vertical-aside-mini-mode-hidden-elements text-truncate">Cấu
+                                    hình</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </aside>
+</div>
+  <!-- chỉnh ở đây -->
+
+  <div id="sidebarCompact" class="d-none"></div>
+
+  <script src="assets\js\demo.js"></script>
+
+  <main id="content" role="main" class="main">
+    <!-- Content -->
+    <div class="content container-fluid">
+      <!-- Page Header -->
+      <div class="page-header d-print-none">
+        <div class="row align-items-center">
+          <div class="col-sm mb-2 mb-sm-0">
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb breadcrumb-no-gutter">
+                <li class="breadcrumb-item"><a class="breadcrumb-link" href="order.html"><i class="tio-back-ui"></i>Quản lý đơn hàng</a></li>
+<!--                <li class="breadcrumb-item active" aria-current="page">Chi tiết đơn hàng</li>-->
+              </ol>
+            </nav>
+                <h1 class="page-header-title m-auto">Chi tiết đơn hàng</h1>
+
+            <div class="d-sm-flex align-items-sm-center">
+              <span class="page-header-title text-dark">Đơn hàng #32543</span>
+              <span class="badge badge-soft-success ml-sm-3">
+                <span class="legend-indicator bg-success"></span>Đã thanh toán
+              </span>
+              <span class="ml-2 ml-sm-3">
+                <i class="tio-date-range"></i> 17/11/2022, 5:48
+              </span>
+            </div>
+
+            <div class="mt-2">
+              <a class="text-body mr-3" href="javascript:;" onclick="window.print(); return false;">
+                <i class="tio-print mr-1"></i> In đơn hàng
+              </a>
+
+              <!-- Unfold -->
+              <div class="hs-unfold">
+                <a class="js-hs-unfold-invoker text-body" href="javascript:;" data-hs-unfold-options='{
+                       "target": "#moreOptionsDropdown",
+                       "type": "css-animation"
+                     }'>
+                  Thêm <i class="tio-chevron-down"></i>
+                </a>
+
+                <div id="moreOptionsDropdown" class="hs-unfold-content dropdown-unfold dropdown-menu mt-1">
+                  <a class="dropdown-item" href="#">
+                    <i class="tio-copy dropdown-item-icon"></i> Bản sao
+                  </a>
+                  <a class="dropdown-item" href="#">
+                    <i class="tio-clear dropdown-item-icon"></i> Hủy đơn hàng
+                  </a>
+                  <a class="dropdown-item" href="#">
+                    <i class="tio-archive dropdown-item-icon"></i> Lưu trữ
+                  </a>
+                  <a class="dropdown-item" href="#">
+                    <i class="tio-visible dropdown-item-icon"></i> Xem trang trạng thái đơn hàng
+                  </a>
+                  <a class="dropdown-item" href="#">
+                    <i class="tio-edit dropdown-item-icon"></i> Chỉnh sửa đơn hàng
+                  </a>
+                </div>
+              </div>
+              <!-- End Unfold -->
+            </div>
+          </div>
+
+          <div class="col-sm-auto">
+            <a class="btn btn-icon btn-sm btn-ghost-secondary rounded-circle mr-1" href="#" data-toggle="tooltip"
+              data-placement="top" title="Đơn trước">
+              <i class="tio-arrow-backward"></i>
+            </a>
+            <a class="btn btn-icon btn-sm btn-ghost-secondary rounded-circle" href="#" data-toggle="tooltip"
+              data-placement="top" title="Đơn sau">
+              <i class="tio-arrow-forward"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- End Page Header -->
+
+      <div class="row">
+        <div class="col-lg-8 mb-3 mb-lg-0">
+          <!-- Card -->
+          <div class="card mb-3 mb-lg-5">
+            <!-- Header -->
+            <div class="card-header">
+              <h4 class="card-header-title">Chi tiết đơn hàng <span
+                  class="badge badge-soft-dark rounded-circle ml-1">3</span></h4>
+              <a class="link" href="javascript:;">Chỉnh sửa</a>
+            </div>
+            <!-- End Header -->
+
+            <!-- Body -->
+            <div class="card-body">
+              <!-- Media -->
+              <div class="media">
+                <div class="media-body d-flex flex-row">
+                  <div class="avatar avatar-xl mr-2">
+                    <img class="img-fluid" src="../images/yamaha/xecontay/1/born-to-ride-004.png"
+                      alt="Image Description">
+                  </div>
+                  <div class="info">
+                    <a class="h5 d-block" href="product-detail.html">Yamaha Born To Ride</a>
+
+                    <div class="font-size-sm text-body">
+                      <span>Màu:</span>
+                      <span class="font-weight-bold">Đỏ đen</span>
+                    </div>
+                  </div>
+
+                  <div class="align-self-center text-dark ml-5">
+                    <span>57.000.000 VNĐ</span>
+                  </div>
+
+                  <div class="col align-self-center text-dark">
+                    <span>2</span>
+                  </div>
+
+                  <div class="align-self-center text-dark">
+                    <span>114.000.000 VNĐ</span>
+                  </div>
+                </div>
+              </div>
+              <!-- End Media -->
+
+              <hr>
+
+              <!-- Media -->
+              <div class="media">
+                <div class="media-body d-flex flex-row">
+                  <div class="avatar avatar-xl mr-2">
+                    <img class="img-fluid" src="../images/yamaha/xecontay/7/ex155-yellow-grey-004.png"
+                      alt="Image Description">
+                  </div>
+                  <div class="info">
+                    <a class="h5 d-block" href="product-detail.html">Yamaha Exciter</a>
+
+                    <div class="font-size-sm text-body mr-5">
+                      <span>Màu:</span>
+                      <span class="font-weight-bold">Vàng Xám</span>
+                    </div>
+                  </div>
+
+                  <div class="align-self-center text-dark ml-5">
+                    <span>&nbsp;&nbsp; 67.000.000 VNĐ</span>
+                  </div>
+
+                  <div class="col align-self-center text-dark">
+                    <span>2</span>
+                  </div>
+
+                  <div class=" align-self-center text-dark">
+                    <span>134.000.000 VNĐ</span>
+                  </div>
+                </div>
+              </div>
+              <!-- End Media -->
+
+              <hr>
+
+              <!-- Media -->
+              <div class="media">
+                <div class="media-body d-flex flex-row">
+                  <div class="avatar avatar-xl mr-2">
+                    <img class="img-fluid" src="../images/yamaha/xephankhoilon/7/r15m-anni-60th-004.png"
+                      alt="Image Description">
+                  </div>
+                  <div class="info">
+                    <a class="h5 d-block" href="product-detail.html">Yamaha R15M Anni 60th</a>
+
+                    <div class="font-size-sm text-body">
+                      <span>Màu:</span>
+                      <span class="font-weight-bold">Trắng</span>
+                    </div>
+                  </div>
+
+                  <div class="align-self-center text-dark">
+                    <span>237.000.000 VNĐ</span>
+                  </div>
+
+                  <div class="col align-self-center text-dark">
+                    <span>1</span>
+                  </div>
+
+                  <div class=" align-self-center text-dark">
+                    <span>237.000.000 VNĐ</span>
+                  </div>
+                </div>
+              </div>
+              <!-- End Media -->
+
+              <hr>
+
+              <div class="row justify-content-md-end mb-3">
+                <div class="col-md-8 col-lg-7">
+                  <dl class="row text-sm-right">
+                    <dt class="col-sm-6">Tổng giá sản phẩm:</dt>
+                    <dd class="col-sm-6">418.000.000 VNĐ</dd>
+                    <dt class="col-sm-6">Phí vận chuyển:</dt>
+                    <dd class="col-sm-6">0 VNĐ</dd>
+                    <dt class="col-sm-6">Thuế:</dt>
+                    <dd class="col-sm-6">0 VNĐ</dd>
+                    <dt class="col-sm-6">Thành tiền:</dt>
+                    <dd class="col-sm-6">418.000.000 VNĐ</dd>
+                    <dt class="col-sm-6">Thanh toán:</dt>
+                    <dd class="col-sm-6">418.000.000 VNĐ</dd>
+                  </dl>
+                  <!-- End Row -->
+                </div>
+              </div>
+              <!-- End Row -->
+            </div>
+            <!-- End Body -->
+          </div>
+          <!-- End Card -->
+
+          <!-- Card -->
+          <div class="card">
+            <!-- Header -->
+            <div class="card-header">
+              <h4 class="card-header-title">
+                Trạng thái giao hàng
+              </h4>
+            </div>
+            <!-- End Header -->
+
+            <!-- Body -->
+            <div class="card-body">
+              <!-- Step -->
+              <ul class="step step-icon-xs">
+                <!-- Step Item -->
+                <li class="step-item">
+                  <div class="step-content-wrapper">
+                    <small class="step-divider">Thứ 2, 15/11/2022</small>
+                  </div>
+                </li>
+                <!-- End Step Item -->
+
+                <!-- Step Item -->
+                <li class="step-item">
+                  <div class="step-content-wrapper">
+                    <span class="step-icon step-icon-soft-dark step-icon-pseudo"></span>
+
+                    <div class="step-content">
+                      <h5 class="mb-1">
+                        <a class="text-dark" href="#">Nhận hàng</a>
+                      </h5>
+
+                      <p class="font-size-sm mb-0">7:30</p>
+                    </div>
+                  </div>
+                </li>
+                <!-- End Step Item -->
+
+                <!-- Step Item -->
+                <li class="step-item">
+                  <div class="step-content-wrapper">
+                    <span class="step-icon step-icon-soft-dark step-icon-pseudo"></span>
+
+                    <div class="step-content">
+                      <h5 class="mb-1">
+                        <a class="text-dark" href="#">Đóng gói bảo vệ</a>
+                      </h5>
+
+                      <p class="font-size-sm mb-0">8:30</p>
+                    </div>
+                  </div>
+                </li>
+                <!-- End Step Item -->
+
+                <!-- Step Item -->
+                <li class="step-item">
+                  <div class="step-content-wrapper">
+                    <span class="step-icon step-icon-soft-dark step-icon-pseudo"></span>
+
+                    <div class="step-content">
+                      <h5 class="mb-1">
+                        <a class="text-dark" href="#">Đang giao hàng</a>
+                      </h5>
+
+                      <p class="font-size-sm mb-0">9:00</p>
+                    </div>
+                  </div>
+                </li>
+                <!-- End Step Item -->
+
+                <!--                  &lt;!&ndash; Step Item &ndash;&gt;-->
+                <!--                  <li class="step-item">-->
+                <!--                    <div class="step-content-wrapper">-->
+                <!--                      <small class="step-divider">Tuesday, 18 August</small>-->
+                <!--                    </div>-->
+                <!--                  </li>-->
+                <!--                  &lt;!&ndash; End Step Item &ndash;&gt;-->
+
+                <!-- Step Item -->
+                <li class="step-item">
+                  <div class="step-content-wrapper">
+                    <span class="step-icon step-icon-soft-dark step-icon-pseudo"></span>
+
+                    <div class="step-content">
+                      <h5 class="mb-1">
+                        <a class="text-dark" href="#">Giao hàng thành công</a>
+                      </h5>
+                      <p class="font-size-sm mb-0">6:29 AM</p>
+                      <p class="font-size-sm mb-0">#32543</p>
+                    </div>
+                  </div>
+                </li>
+                <!-- End Step Item -->
+              </ul>
+              <!-- End Step -->
+
+              <small>Thời gian được hiển thị theo múi giờ địa phương.</small>
+            </div>
+            <!-- End Body -->
+          </div>
+          <!-- End Card -->
+        </div>
+
+        <div class="col-lg-4">
+          <!-- Card -->
+          <div class="card">
+            <!-- Header -->
+            <div class="card-header">
+              <h4 class="card-header-title">Khách hàng</h4>
+            </div>
+            <!-- End Header -->
+
+            <!-- Body -->
+            <div class="card-body">
+              <a class="media align-items-center" href="customer-detail.html">
+                <!--                  href="customer-detail.html"-->
+                <div class="avatar avatar-circle mr-3">
+                  <img class="avatar-img" src="../images/user/user.png" alt="Image Description">
+                </div>
+                <div class="media-body">
+                  <span class="text-body text-hover-primary">Nguyễn Văn Tý</span>
+                </div>
+                <div class="media-body text-right">
+                  <i class="tio-chevron-right text-body"></i>
+                </div>
+              </a>
+
+              <hr>
+
+              <div class="d-flex justify-content-between align-items-center">
+                <h5>Thông tin liên hệ</h5>
+                <a class="link" href="javascript:;">Chỉnh sửa</a>
+              </div>
+
+              <ul class="list-unstyled list-unstyled-py-2">
+                <li>
+                  <i class="tio-online mr-2"></i>
+                  nvt@gmail.com
+                </li>
+                <li>
+                  <i class="tio-android-phone-vs mr-2"></i>
+                  0347895167
+                </li>
+                <li class="list-inline-item">
+                  <i class="tio-poi-outlined mr-1"></i>
+                  <a>Hồ Chí Minh,</a>
+                  <a>Thủ Đức</a>
+                </li>
+              </ul>
+
+              <hr>
+
+              <div class="d-flex justify-content-between align-items-center">
+                <h5>Địa chỉ giao hàng</h5>
+                <a class="link" href="javascript:;">Chỉnh sửa</a>
+              </div>
+
+              <span class="d-block">
+                789 Khu phố 6<br>
+                Linh Trung<br>
+                Thủ Đức<br>
+                Hồ Chí Minh <img class="avatar avatar-xss avatar-circle ml-1" src="../images/test/quoc-ky-viet-nam.jpg" alt="Great Britain Flag">
+              </span>
+
+            </div>
+            <!-- End Body -->
+          </div>
+          <!-- End Card -->
+        </div>
+      </div>
+      <!-- End Row -->
+    </div>
+    <!-- End Content -->
+
+    <!-- Footer -->
+    <div class="footer">
+      <div class="row justify-content-between align-items-center">
+        <div class="col">
+          <p class="font-size-sm mb-0"><span class="d-none d-sm-inline-block">Copyright © 2022 Copyright by VTV
+              VietNam</span></p>
+        </div>
+
+      </div>
+    </div>
+    <!-- End Footer -->
+  </main>
+
+  <!-- JS Implementing Plugins -->
+  <script src="assets\js\vendor.min.js"></script>
+
+  <!-- JS Front -->
+  <script src="assets\js\theme.min.js"></script>
+
+  <!-- JS Plugins Init. -->
+  <script>
+    $(document).on('ready', function () {
+      // ONLY DEV
+      // =======================================================
+
+      if (window.localStorage.getItem('hs-builder-popover') === null) {
+        $('#builderPopover').popover('show')
+          .on('shown.bs.popover', function () {
+            $('.popover').last().addClass('popover-dark')
+          });
+
+        $(document).on('click', '#closeBuilderPopover', function () {
+          window.localStorage.setItem('hs-builder-popover', true);
+          $('#builderPopover').popover('dispose');
+        });
+      } else {
+        $('#builderPopover').on('show.bs.popover', function () {
+          return false
+        });
+      }
+
+      // END ONLY DEV
+      // =======================================================
+
+
+      // BUILDER TOGGLE INVOKER
+      // =======================================================
+      $('.js-navbar-vertical-aside-toggle-invoker').click(function () {
+        $('.js-navbar-vertical-aside-toggle-invoker i').tooltip('hide');
+      });
+
+
+      // INITIALIZATION OF MEGA MENU
+      // =======================================================
+      var megaMenu = new HSMegaMenu($('.js-mega-menu'), {
+        desktop: {
+          position: 'left'
+        }
+      }).init();
+
+
+
+      // INITIALIZATION OF NAVBAR VERTICAL NAVIGATION
+      // =======================================================
+      var sidebar = $('.js-navbar-vertical-aside');
+      sidebar.hsSideNav({
+        mobileOverlayClass: 'd-print-none'
+      });
+
+      $('.js-navbar-vertical-aside').addClass('d-print-none');
+
+
+      // INITIALIZATION OF TOOLTIP IN NAVBAR VERTICAL MENU
+      // =======================================================
+      $('.js-nav-tooltip-link').tooltip({ boundary: 'window' })
+
+      $(".js-nav-tooltip-link").on("show.bs.tooltip", function (e) {
+        if (!$("body").hasClass("navbar-vertical-aside-mini-mode")) {
+          return false;
+        }
+      });
+
+
+      // INITIALIZATION OF UNFOLD
+      // =======================================================
+      $('.js-hs-unfold-invoker').each(function () {
+        var unfold = new HSUnfold($(this)).init();
+      });
+
+
+      // INITIALIZATION OF FORM SEARCH
+      // =======================================================
+      $('.js-form-search').each(function () {
+        new HSFormSearch($(this)).init()
+      });
+    });
+  </script>
+
+  <!-- IE Support -->
+  <script>
+    if (/MSIE \d|Trident.*rv:/.test(navigator.userAgent)) document.write('<script src="./assets/vendor/babel-polyfill/polyfill.min.js"><\/script>');
+  </script>
+</body>
+
+</html>

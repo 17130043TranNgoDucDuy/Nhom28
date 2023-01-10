@@ -1,0 +1,940 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required Meta Tags Always Come First -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Title -->
+    <title>VTV | Admin - Thêm sản phẩm</title>
+
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- CSS Implementing Plugins -->
+    <link rel="stylesheet" href="assets\css\vendor.min.css">
+    <link rel="stylesheet" href="assets\vendor\icon-set\style.css">
+    <!-- CSS Front Template -->
+    <link rel="stylesheet" href="assets\css\theme.min.css?v=1.0">
+
+    <!-- add them -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css" rel="stylesheet"/>
+</head>
+
+<body class="footer-offset">
+
+    <script src="assets\vendor\hs-navbar-vertical-aside\hs-navbar-vertical-aside-mini-cache.js"></script>
+
+    <!-- Builder -->
+    <div id="styleSwitcherDropdown" class="hs-unfold-content sidebar sidebar-bordered sidebar-box-shadow"
+         style="width: 35rem;">
+        <div class="card card-lg border-0 h-100">
+            <!-- Footer -->
+            <div class="card-footer">
+                <div class="row gx-2">
+                    <div class="col">
+                        <button type="button" id="js-builder-reset" class="btn btn-block btn-lg btn-white">
+                            <i class="tio-restore"></i> Reset
+                        </button>
+                    </div>
+                    <div class="col">
+                        <button type="button" id="js-builder-preview" class="btn btn-block btn-lg btn-primary">
+                            <i class="tio-visible"></i> Preview
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JS Preview mode only -->
+    <div id="headerMain" class="d-none">
+        <header id="header"
+                class="navbar navbar-expand-lg navbar-fixed navbar-height navbar-flush navbar-container navbar-bordered">
+            <div class="navbar-nav-wrap">
+                <div class="navbar-brand-wrapper">
+                    <!-- Logo -->
+                    <a class="navbar-brand" href="index.html" aria-label="Front">
+                        <img class="navbar-brand-logo" src="../images/logo/logo.png" alt="Logo">
+                        <img class="navbar-brand-logo-mini" src="../images/logo/logo.png" alt="Logo">
+                    </a>
+                </div>
+
+                <div class="navbar-nav-wrap-content-left">
+                    <!-- Navbar Vertical Toggle -->
+                    <button type="button" class="js-navbar-vertical-aside-toggle-invoker close mr-3">
+                        <i class="tio-first-page navbar-vertical-aside-toggle-short-align" data-toggle="tooltip"
+                           data-placement="right" title="Thu nhỏ"></i>
+                        <i class="tio-last-page navbar-vertical-aside-toggle-full-align"
+                           data-template='<div class="tooltip d-none d-sm-block" role="tooltip"><div class="arrow"></div><div class="tooltip-inner"></div></div>'
+                           data-toggle="tooltip" data-placement="right" title="Mở rộng"></i>
+                    </button>
+                    <!-- End Navbar Vertical Toggle -->
+
+                    <!-- Search Form -->
+                    <div class="d-none d-md-block">
+                        <form class="position-relative">
+                            <!-- Input Group -->
+                            <div
+                                    class="input-group input-group-merge input-group-borderless input-group-hover-light navbar-input-group">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text">
+                                        <i class="tio-search"></i>
+                                    </div>
+                                </div>
+                                <input type="search" class="js-form-search form-control" placeholder="Tìm kiếm...">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Secondary Content -->
+                <div class="navbar-nav-wrap-content-right">
+                    <!-- Navbar -->
+                    <ul class="navbar-nav align-items-center flex-row">
+                        <li class="nav-item d-md-none">
+                            <!-- Search Trigger -->
+                            <div class="hs-unfold">
+                                <a class="js-hs-unfold-invoker btn btn-icon btn-ghost-secondary rounded-circle" href="javascript:;"
+                                   data-hs-unfold-options='{
+                 "target": "#searchDropdown",
+                 "type": "css-animation",
+                 "animationIn": "fadeIn",
+                 "hasOverlay": "rgba(46, 52, 81, 0.1)",
+                 "closeBreakpoint": "md"
+               }'>
+                                    <i class="tio-search"></i>
+                                </a>
+                            </div>
+                        </li>
+
+                        <li class="nav-item">
+                            <!-- Account -->
+                            <div class="hs-unfold">
+                                <a class="js-hs-unfold-invoker navbar-dropdown-account-wrapper" href="javascript:;"
+                                   data-hs-unfold-options='{
+                 "target": "#accountNavbarDropdown",
+                 "type": "css-animation"
+               }'>
+                                    <div class="avatar avatar-sm avatar-circle">
+                                        <img class="avatar-img" src="../images/test/admin1.jpg" alt="Image Description">
+                                        <span class="avatar-status avatar-sm-status avatar-status-success"></span>
+                                    </div>
+                                </a>
+
+                                <div id="accountNavbarDropdown"
+                                     class="hs-unfold-content dropdown-unfold dropdown-menu dropdown-menu-right navbar-dropdown-menu navbar-dropdown-account"
+                                     style="width: 16rem;">
+                                    <div class="dropdown-item-text">
+                                        <div class="media align-items-center">
+                                            <div class="avatar avatar-sm avatar-dark avatar-circle mr-2">
+                                                <img class="avatar-img" src="../images/test/admin1.jpg" alt="Image Description">
+                                                <!-- <span class="avatar-initials">A</span> -->
+                                            </div>
+                                            <div class="media-body">
+                                                <span class="card-title h5">Nguyễn Văn A</span>
+                                                <span class="card-text">nguyenvana@gmail.com</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#">
+                                        <span class="text-truncate pr-2" title="Profile &amp; account">Hồ Sơ Tài Khoản</span>
+                                    </a>
+                                    <a class="dropdown-item" href="#">
+                                        <span class="text-truncate pr-2" title="Sign out">Đăng Xuất</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+    </div>
+
+    <div id="headerFluid" class="d-none"></div>
+    <div id="headerDouble" class="d-none"></div>
+
+    <!-- Thanh menu -->
+    <div id="sidebarMain" class="d-none">
+        <aside
+                class="js-navbar-vertical-aside navbar navbar-vertical-aside navbar-vertical navbar-vertical-fixed navbar-expand-xl navbar-bordered  ">
+            <div class="navbar-vertical-container">
+                <div class="navbar-vertical-footer-offset">
+                    <div class="navbar-brand-wrapper justify-content-between">
+                        <!-- Logo -->
+                        <a class="navbar-brand" href="index.html" aria-label="Front">
+                            <img class="navbar-brand-logo" src="../images/logo/logo.png" alt="Logo">
+                        </a>
+
+                        <!-- Navbar Vertical Toggle -->
+                        <button type="button"
+                                class="js-navbar-vertical-aside-toggle-invoker navbar-vertical-aside-toggle btn btn-icon btn-xs btn-ghost-dark">
+                            <i class="tio-clear tio-lg"></i>
+                        </button>
+                    </div>
+
+                    <!-- Content -->
+                    <div class="navbar-vertical-content">
+                        <ul class="navbar-nav navbar-nav-lg nav-tabs">
+                            <!-- Dashboards -->
+                            <li class="navbar-vertical-aside-has-menu ">
+                                <a class="js-navbar-vertical-aside-menu-link nav-link  " href="../backend/index.html"
+                                   title="Dashboards">
+                                    <i class="tio-home-vs-1-outlined nav-icon"></i>
+                                    <span class="navbar-vertical-aside-mini-mode-hidden-elements text-truncate">Trang
+                    chủ</span>
+                                </a>
+                            </li>
+
+                            <li class="navbar-vertical-aside-has-menu ">
+                                <a class="js-navbar-vertical-aside-menu-link nav-link" href="../backend/employee.html"
+                                   title="Nhân viên">
+                                    <i class="tio-users-switch nav-icon"></i>
+                                    <span class="navbar-vertical-aside-mini-mode-hidden-elements text-truncate">Nhân
+                    viên</span>
+                                </a>
+                            </li>
+
+                            <li class="navbar-vertical-aside-has-menu ">
+                                <a class="js-navbar-vertical-aside-menu-link nav-link" href="../backend/customer.html"
+                                   title="Khách hàng">
+                                    <i class="tio-user-big-outlined nav-icon"></i>
+                                    <span class="navbar-vertical-aside-mini-mode-hidden-elements text-truncate">Khách
+                    hàng</span>
+                                </a>
+                            </li>
+
+                            <li class="navbar-vertical-aside-has-menu ">
+                                <a class="js-navbar-vertical-aside-menu-link nav-link" href="../backend/banner.html" title="Quảng cáo">
+                                    <i class="tio-panorama-image nav-icon"></i>
+                                    <span class="navbar-vertical-aside-mini-mode-hidden-elements text-truncate">Quảng
+                    cáo</span>
+                                </a>
+                            </li>
+
+                            <li class="navbar-vertical-aside-has-menu ">
+                                <a class="js-navbar-vertical-aside-menu-link nav-link active" href="../backend/product.html" title="Quảng cáo">
+                                    <i class="tio-motocycle nav-icon"></i>
+                                    <span class="navbar-vertical-aside-mini-mode-hidden-elements text-truncate">Sản phẩm</span>
+                                </a>
+                            </li>
+
+                            <li class="navbar-vertical-aside-has-menu ">
+                                <a class="js-navbar-vertical-aside-menu-link nav-link" href="../backend/order.html" title="Đơn hàng">
+                                    <i class="tio-receipt-outlined nav-icon"></i>
+                                    <span class="navbar-vertical-aside-mini-mode-hidden-elements text-truncate">Đơn
+                    hàng</span>
+                                </a>
+                            </li>
+
+                            <li class="navbar-vertical-aside-has-menu ">
+                                <a class="js-navbar-vertical-aside-menu-link nav-link" href="../backend/review.html" title="Đánh giá">
+                                    <i class="tio-comment-vs-outlined nav-icon"></i>
+                                    <span class="navbar-vertical-aside-mini-mode-hidden-elements text-truncate">Đánh
+                    giá</span>
+                                </a>
+                            </li>
+
+                            <li class="navbar-vertical-aside-has-menu ">
+                                <a class="js-navbar-vertical-aside-menu-link nav-link" href="../backend/statistic.html"
+                                   title="Thống kê">
+                                    <i class="tio-chart-bar-1 nav-icon"></i>
+                                    <span class="navbar-vertical-aside-mini-mode-hidden-elements text-truncate">Thống
+                    kê</span>
+                                </a>
+                            </li>
+
+                            <li class="navbar-vertical-aside-has-menu ">
+                                <a class="js-navbar-vertical-aside-menu-link nav-link" href="../backend/setting.html" title="Cấu hình">
+                                    <i class="tio-settings nav-icon"></i>
+                                    <span class="navbar-vertical-aside-mini-mode-hidden-elements text-truncate">Cấu
+                    hình</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </aside>
+    </div>
+    <!-- chỉnh ở đây -->
+
+    <div id="sidebarCompact" class="d-none"></div>
+
+
+    <main id="content" role="main" class="main">
+        <!-- Content -->
+        <div class="content container-fluid">
+            <!-- Page Header -->
+            <div class="page-header">
+                <div class="row align-items-center">
+                    <div class="col-sm mb-2 mb-sm-0">
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb breadcrumb-no-gutter">
+                                <li class="breadcrumb-item"><a class="breadcrumb-link" href="./product.html">Kho
+                                        sản phẩm</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Thêm sản phẩm</li>
+                            </ol>
+                        </nav>
+
+                        <h1 class="page-header-title">Thêm sản phẩm</h1>
+                    </div>
+                </div>
+                <!-- End Row -->
+            </div>
+            <!-- End Page Header -->
+
+            <div class="row">
+                <div class="col-lg-8">
+                    <!-- Card -->
+                    <div class="card mb-3 mb-lg-5">
+                        <!-- Header -->
+                        <div class="card-header">
+                            <h4 class="card-header-title">Thông tin cơ bản</h4>
+                        </div>
+                        <!-- End Header -->
+
+                        <!-- Body -->
+                        <div class="card-body">
+                            <!-- Form Group -->
+                            <div class="form-group">
+                                <label for="productNameLabel" class="input-label">Tên xe </label>
+
+                                <input type="text" class="form-control" name="productName" id="productNameLabel"
+                                    placeholder="Nhập tên xe" aria-label="Shirt, t-shirts, etc.">
+                            </div>
+                            <!-- End Form Group -->
+
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <!-- Form Group -->
+                                    <div class="form-group">
+                                        <label class="input-label" for="exampleFormControlSelect2">Hãng xe <span
+                                                class="input-label-secondary"></span></label>
+                                        <select id="exampleFormControlSelect2" class="form-control">
+                                            <option></option>
+                                            <option>Yamaha</option>
+                                            <option>Suzuki</option>
+                                            <option>Honda</option>
+                                            <option>THÊM MỚI</option>
+                                        </select>
+                                    </div>
+                                    <!-- End Form Group -->
+                                </div>
+
+                                <div class="col-sm-6">
+                                    <!-- Form Group -->
+                                    <div class="form-group">
+                                        <label class="input-label" for="exampleFormControlSelect1">Chọn loại xe <span
+                                                class="input-label-secondary"></span></label>
+                                        <select id="exampleFormControlSelect1" class="form-control">
+                                            <option></option>
+                                            <option>Xe số</option>
+                                            <option>Xe tay ga</option>
+                                            <option>THÊM MỚI</option>
+                                        </select>
+                                    </div>
+                                    <!-- End Form Group -->
+                                </div>
+                            </div>
+                            <!-- End Row -->
+
+                            <label class="input-label">Mô tả <span class="input-label-secondary">(Đặc
+                                    điểm)</span></label>
+
+                            <!-- Quill -->
+                            <div class="quill-custom">
+                                <div class="ql-toolbar ql-snow"><span class="ql-formats"><span
+                                            class="ql-header ql-picker"><span class="ql-picker-label" tabindex="0"
+                                                role="button" aria-expanded="false"
+                                                aria-controls="ql-picker-options-0"><svg viewBox="0 0 18 18">
+                                                    <polygon class="ql-stroke" points="7 11 9 13 11 11 7 11"></polygon>
+                                                    <polygon class="ql-stroke" points="7 7 9 5 11 7 7 7"></polygon>
+                                                </svg></span><span class="ql-picker-options" aria-hidden="true"
+                                                tabindex="-1" id="ql-picker-options-0"><span tabindex="0" role="button"
+                                                    class="ql-picker-item" data-value="1"></span><span tabindex="0"
+                                                    role="button" class="ql-picker-item" data-value="2"></span><span
+                                                    tabindex="0" role="button" class="ql-picker-item"
+                                                    data-value="3"></span><span tabindex="0" role="button"
+                                                    class="ql-picker-item"></span></span></span><select
+                                            class="ql-header" style="display: none;">
+                                            <option value="1"></option>
+                                            <option value="2"></option>
+                                            <option value="3"></option>
+                                            <option selected="selected"></option>
+                                        </select></span><span class="ql-formats"><button type="button"
+                                            class="ql-bold"><svg viewBox="0 0 18 18">
+                                                <path class="ql-stroke"
+                                                    d="M5,4H9.5A2.5,2.5,0,0,1,12,6.5v0A2.5,2.5,0,0,1,9.5,9H5A0,0,0,0,1,5,9V4A0,0,0,0,1,5,4Z">
+                                                </path>
+                                                <path class="ql-stroke"
+                                                    d="M5,9h5.5A2.5,2.5,0,0,1,13,11.5v0A2.5,2.5,0,0,1,10.5,14H5a0,0,0,0,1,0,0V9A0,0,0,0,1,5,9Z">
+                                                </path>
+                                            </svg></button><button type="button" class="ql-italic"><svg
+                                                viewBox="0 0 18 18">
+                                                <line class="ql-stroke" x1="7" x2="13" y1="4" y2="4"></line>
+                                                <line class="ql-stroke" x1="5" x2="11" y1="14" y2="14"></line>
+                                                <line class="ql-stroke" x1="8" x2="10" y1="14" y2="4"></line>
+                                            </svg></button><button type="button" class="ql-underline"><svg
+                                                viewBox="0 0 18 18">
+                                                <path class="ql-stroke"
+                                                    d="M5,3V9a4.012,4.012,0,0,0,4,4H9a4.012,4.012,0,0,0,4-4V3"></path>
+                                                <rect class="ql-fill" height="1" rx="0.5" ry="0.5" width="12" x="3"
+                                                    y="15"></rect>
+                                            </svg></button><button type="button" class="ql-link"><svg
+                                                viewBox="0 0 18 18">
+                                                <line class="ql-stroke" x1="7" x2="11" y1="7" y2="11"></line>
+                                                <path class="ql-even ql-stroke"
+                                                    d="M8.9,4.577a3.476,3.476,0,0,1,.36,4.679A3.476,3.476,0,0,1,4.577,8.9C3.185,7.5,2.035,6.4,4.217,4.217S7.5,3.185,8.9,4.577Z">
+                                                </path>
+                                                <path class="ql-even ql-stroke"
+                                                    d="M13.423,9.1a3.476,3.476,0,0,0-4.679-.36,3.476,3.476,0,0,0,.36,4.679c1.392,1.392,2.5,2.542,4.679.36S14.815,10.5,13.423,9.1Z">
+                                                </path>
+                                            </svg></button></span><span class="ql-formats"><button type="button"
+                                            class="ql-list" value="ordered"><svg viewBox="0 0 18 18">
+                                                <line class="ql-stroke" x1="7" x2="15" y1="4" y2="4"></line>
+                                                <line class="ql-stroke" x1="7" x2="15" y1="9" y2="9"></line>
+                                                <line class="ql-stroke" x1="7" x2="15" y1="14" y2="14"></line>
+                                                <line class="ql-stroke ql-thin" x1="2.5" x2="4.5" y1="5.5" y2="5.5">
+                                                </line>
+                                                <path class="ql-fill"
+                                                    d="M3.5,6A0.5,0.5,0,0,1,3,5.5V3.085l-0.276.138A0.5,0.5,0,0,1,2.053,3c-0.124-.247-0.023-0.324.224-0.447l1-.5A0.5,0.5,0,0,1,4,2.5v3A0.5,0.5,0,0,1,3.5,6Z">
+                                                </path>
+                                                <path class="ql-stroke ql-thin"
+                                                    d="M4.5,10.5h-2c0-.234,1.85-1.076,1.85-2.234A0.959,0.959,0,0,0,2.5,8.156">
+                                                </path>
+                                                <path class="ql-stroke ql-thin"
+                                                    d="M2.5,14.846a0.959,0.959,0,0,0,1.85-.109A0.7,0.7,0,0,0,3.75,14a0.688,0.688,0,0,0,.6-0.736,0.959,0.959,0,0,0-1.85-.109">
+                                                </path>
+                                            </svg></button><button type="button" class="ql-list" value="bullet"><svg
+                                                viewBox="0 0 18 18">
+                                                <line class="ql-stroke" x1="6" x2="15" y1="4" y2="4"></line>
+                                                <line class="ql-stroke" x1="6" x2="15" y1="9" y2="9"></line>
+                                                <line class="ql-stroke" x1="6" x2="15" y1="14" y2="14"></line>
+                                                <line class="ql-stroke" x1="3" x2="3" y1="4" y2="4"></line>
+                                                <line class="ql-stroke" x1="3" x2="3" y1="9" y2="9"></line>
+                                                <line class="ql-stroke" x1="3" x2="3" y1="14" y2="14"></line>
+                                            </svg></button></span><span class="ql-formats"><button type="button"
+                                            class="ql-clean"><svg class="" viewBox="0 0 18 18">
+                                                <line class="ql-stroke" x1="5" x2="13" y1="3" y2="3"></line>
+                                                <line class="ql-stroke" x1="6" x2="9.35" y1="12" y2="3"></line>
+                                                <line class="ql-stroke" x1="11" x2="15" y1="11" y2="15"></line>
+                                                <line class="ql-stroke" x1="15" x2="11" y1="11" y2="15"></line>
+                                                <rect class="ql-fill" height="1" rx="0.5" ry="0.5" width="7" x="2"
+                                                    y="14"></rect>
+                                            </svg></button></span></div>
+                                <div class="js-quill ql-container ql-snow" style="min-height: 15rem;"
+                                    data-hs-quill-options="{
+                          &quot;placeholder&quot;: &quot;Type your description...&quot;
+                         }">
+                                    <div class="ql-editor ql-blank" data-gramm="false" contenteditable="true"
+                                        data-placeholder="Type your description...">
+                                        <p><br></p>
+                                    </div>
+                                    <div class="ql-clipboard" contenteditable="true" tabindex="-1"></div>
+                                    <div class="ql-tooltip ql-hidden"><a class="ql-preview" rel="noopener noreferrer"
+                                            target="_blank" href="about:blank"></a><input type="text"
+                                            data-formula="e=mc^2" data-link="https://quilljs.com"
+                                            data-video="Embed URL"><a class="ql-action"></a><a class="ql-remove"></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End Quill -->
+                        </div>
+                        <!-- Body -->
+                    </div>
+                    <!-- End Card -->
+
+                    <!-- Card -->
+                    <div class="card mb-3 mb-lg-5">
+                        <!-- Header -->
+                        <div class="card-header">
+                            <h4 class="card-header-title">Hình ảnh</h4>
+
+                            <!-- Unfold -->
+                            <div class="hs-unfold">
+                                <a class="js-hs-unfold-invoker btn btn-sm btn-ghost-secondary" data-hs-unfold-options='{
+                       "target": "#mediaDropdown",
+                       "type": "css-animation"
+                     }'>
+                                    Thêm từ URL <i class="tio-chevron-down"></i>
+                                </a>
+
+                                <div id="mediaDropdown"
+                                    class="hs-unfold-content dropdown-unfold dropdown-menu dropdown-menu-right mt-1">
+                                    <a class="dropdown-item" data-toggle="modal" data-target="#addImageFromURLModal">
+                                        <i class="tio-link dropdown-item-icon"></i> URL
+                                    </a>
+                                    <a class="dropdown-item" data-toggle="modal" data-target="#embedVideoModal">
+                                        <i class="tio-save dropdown-item-icon"></i> Từ bộ nhớ
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- End Unfold -->
+                        </div>
+                        <!-- End Header -->
+
+                        <!-- Body -->
+                        <div class="card-body">
+                            <!-- Dropzone -->
+                            <div id="attachFilesNewProjectLabel" class="js-dropzone dropzone-custom custom-file-boxed">
+                                <div class="dz-message custom-file-boxed-label">
+                                    <img class="avatar avatar-xl avatar-4by3 mb-3"
+                                        src="../images/user/browse.svg" alt="Image Description">
+                                    <h5 class="mb-1">Chọn ảnh trên máy</h5>
+                                    <p class="mb-2">hoặc</p>
+                                    <span data-target="#addImageFromURLModal" class="btn btn-sm btn-primary">Tải ảnh
+                                        bằng URL</span>
+                                </div>
+                            </div>
+                            <!-- End Dropzone -->
+                        </div>
+                        <!-- Body -->
+                    </div>
+                    <!-- End Card -->
+
+                    <!-- Card -->
+                    <div class="card">
+                        <!-- Header -->
+                        <div class="card-header" style="display:-webkit-inline-box;">
+                            <h4 class="card-header-title">Thông số</h4><i class="tio-help-outlined text-body ml-1"
+                                data-toggle="tooltip" data-placement="top" title="Căng nặng: kg, Kích thước mm"></i>
+                        </div>
+                        <!-- End Header -->
+                        <div class="table-responsive datatable-custom">
+                            <table style="overflow: hidden" id="datatable"
+                                class="table table-borderless table-thead-bordered table-nowrap table-align-middle card-table"
+                                data-hs-datatables-options='{
+                     "columnDefs": [{
+                        "targets": [0, 4, 9],
+                        "width": "5%",
+                        "orderable": false
+                      }],
+                     "order": [],
+                     "info": {
+                       "totalQty": "#datatableWithPaginationInfoTotalQty"
+                     },
+                     "search": "#datatableSearch",
+                     "entries": "#datatableEntries",
+                     "pageLength": #,
+                     "isResponsive": false,
+                     "isShowPaging": false,
+                     "pagination": "datatablePagination"
+                   }'>
+                                <thead class="thead-light">
+                                    <tr>
+                                        <th>Tên thông số</th>
+                                        <th>Giá trị</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- Body -->
+                        <div class="card-body">
+                            <h6 class="text-cap"></h6>
+
+                            <div class="js-add-field" data-hs-add-field-options='{
+                      "template": "#addAnotherOptionFieldTemplate",
+                      "container": "#addAnotherOptionFieldContainer",
+                      "defaultCreated": 0
+                    }'>
+                                <!-- Form Group -->
+                                <div class="form-group">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <div class="input-group-prepend">
+                                                <input type="text" class="form-control" name="vendor"
+                                                    placeholder="Tên thông số" aria-label="">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-8">
+                                            <input type="text" class="form-control" name="vendor" placeholder="Giá trị"
+                                                aria-label="">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- End Form Group -->
+
+                                <!-- Container For Input Field -->
+                                <div id="addAnotherOptionFieldContainer"></div>
+
+                                <a href="#" class="js-create-field btn btn-sm btn-no-focus btn-ghost-primary">
+                                    <i class="tio-add"></i> Thêm thông số
+                                </a>
+                            </div>
+
+                            <!-- Add Another Option Input Field -->
+                            <div id="addAnotherOptionFieldTemplate" style="display: none;">
+                                <!-- Form Group -->
+                                <div class="form-group">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <div class="input-group-prepend">
+                                                <!-- Select -->
+                                                <select class="js-select2-custom-dynamic custom-select" size="1"
+                                                    style="opacity: 0;" data-hs-select2-options='{
+                                    "minimumResultsForSearch": "Infinity"
+                                  }'>
+                                                    <option value="Size">Size</option>
+                                                    <option value="Color">Color</option>
+                                                    <option value="Material">Material</option>
+                                                    <option value="Style">Style</option>
+                                                    <option value="Title">Title</option>
+                                                </select>
+                                                <!-- End Select -->
+                                            </div>
+                                        </div>
+
+                                        <div class="col-8">
+                                            <!-- Select2 -->
+                                            <select class="js-select2-custom-dynamic custom-select" size="1"
+                                                style="opacity: 0;" multiple="" data-hs-select2-options='{
+                                  "minimumResultsForSearch": "Infinity",
+                                  "placeholder": "Separate options with enter",
+                                  "tags": true
+                                }'>
+                                                <option label="empty"></option>
+                                            </select>
+                                            <!-- End Select2 -->
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End Form Group -->
+                            </div>
+                            <!-- End Add Another Option Input Field -->
+                        </div>
+                        <!-- Body -->
+                    </div>
+                    <!-- End Card -->
+                </div>
+
+                <div class="col-lg-4">
+                    <!-- Card -->
+                    <div class="card mb-3 mb-lg-5">
+                        <!-- Header -->
+                        <div class="card-header">
+                            <h4 class="card-header-title">Giá xe</h4>
+                        </div>
+                        <!-- End Header -->
+
+                        <!-- Body -->
+                        <div class="card-body">
+                            <!-- Form Group -->
+                            <div class="form-group">
+                                <!--                            <label for="priceNameLabel" class="input-label">Giá</label>-->
+
+                                <div class="input-group">
+                                    <input type="number" class="form-control" name="priceName" id="priceNameLabel"
+                                        placeholder="0" aria-label="0.00">
+
+                                    <div class="input-group-append">
+                                        <!-- Select -->
+                                        <div id="priceSelect" class="select2-custom select2-custom-right">
+                                            <select class="js-select2-custom custom-select" size="1" style="opacity: 0;"
+                                                data-hs-select2-options='{
+                                    "dropdownParent": "#priceSelect",
+                                    "dropdownAutoWidth": true,
+                                    "width": true
+                                  }'>
+                                                <option value="USD" selected="">VNĐ</option>
+                                            </select>
+                                        </div>
+                                        <!-- End Select -->
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End Form Group -->
+
+                            <!-- End Toggle Switch -->
+                        </div>
+                        <!-- Body -->
+                    </div>
+                    <!-- End Card -->
+
+                    <!-- Card -->
+                    <div class="card">
+                        <!-- Header -->
+                        <div class="card-header">
+                            <h4 class="card-header-title">Số lượng tồn kho</h4>
+                        </div>
+                        <!-- End Header -->
+
+                        <!-- Body -->
+                        <div class="card-body">
+                            <!-- Form Group -->
+                            <div class="form-group">
+                                <!--                            <label for="vendorLabel" class="input-label">Vendor</label>-->
+
+                                <input type="number" class="form-control" name="vendor" id="vendorLabel" placeholder="0"
+                                    aria-label="eg. Nike">
+                            </div>
+                            <!-- End Form Group -->
+
+
+
+                        </div>
+                        <!-- End Body -->
+                    </div>
+
+                    <br>
+
+                    <div class="card">
+                        <!-- Header -->
+                        <div class="card-header">
+                            <h4 class="card-header-title">Trạng thái</h4>
+                        </div>
+                        <!-- End Header -->
+
+                        <!-- Body -->
+                        <div class="card-body">
+                            <!-- Form Group -->
+                            <div class="form-group">
+                                <!--                            <label for="vendorLabel" class="input-label">Vendor</label>-->
+
+                                <input type="text" class="form-control" name="vendor" id="vendorLabel"
+                                      placeholder="Nhập vào trạng thái" aria-label="eg. Nike">
+                            </div>
+                            <!-- End Form Group -->
+
+                        </div>
+                        <!-- End Body -->
+                    </div>
+                    <!-- End Card -->
+                </div>
+            </div>
+            <!-- End Row -->
+            <div class="float-right">
+                <button class="btn-primary">Lưu</button>
+                <button class="btn-danger">Hủy</button>
+            </div>
+            <div class="position-fixed bottom-0 content-centered-x w-100 z-index-99 mb-3"
+                style="max-width: 40rem;display: none">
+                <!-- Card -->
+                <div class="card card-sm bg-dark border-dark mx-2">
+                    <div class="card-body">
+                        <div class="row justify-content-center justify-content-sm-between">
+                            <div class="col">
+                                <button type="button" class="btn btn-ghost-danger">Xóa</button>
+                            </div>
+                            <div class="col-auto">
+                                <button type="button" class="btn btn-ghost-light mr-2">Hủy</button>
+                                <button type="button" class="btn btn-primary">Lưu</button>
+                            </div>
+                        </div>
+                        <!-- End Row -->
+                    </div>
+                </div>
+                <!-- End Card -->
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="row justify-content-between align-items-center">
+                <div class="col">
+                    <p class="font-size-sm mb-0"><span class="d-none d-sm-inline-block">Copyright © 2022 Copyright by
+                            VTV
+                            VietNam</span></p>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <script src="assets\js\demo.js"></script>
+    <script src="assets\js\vendor.min.js"></script>
+
+
+    <script src="assets\js\theme.min.js"></script>
+
+    <!-- JS Plugins Init. -->
+    <script>
+        $(document).on('ready', function () {
+            // ONLY DEV
+            // =======================================================
+
+            if (window.localStorage.getItem('hs-builder-popover') === null) {
+                $('#builderPopover').popover('show')
+                    .on('shown.bs.popover', function () {
+                        $('.popover').last().addClass('popover-dark')
+                    });
+
+                $(document).on('click', '#closeBuilderPopover', function () {
+                    window.localStorage.setItem('hs-builder-popover', true);
+                    $('#builderPopover').popover('dispose');
+                });
+            } else {
+                $('#builderPopover').on('show.bs.popover', function () {
+                    return false
+                });
+            }
+
+            // END ONLY DEV
+            // =======================================================
+
+
+            // BUILDER TOGGLE INVOKER
+            // =======================================================
+            $('.js-navbar-vertical-aside-toggle-invoker').click(function () {
+                $('.js-navbar-vertical-aside-toggle-invoker i').tooltip('hide');
+            });
+
+
+            // INITIALIZATION OF MEGA MENU
+            // =======================================================
+            var megaMenu = new HSMegaMenu($('.js-mega-menu'), {
+                desktop: {
+                    position: 'left'
+                }
+            }).init();
+
+
+            // INITIALIZATION OF NAVBAR VERTICAL NAVIGATION
+            // =======================================================
+            var sidebar = $('.js-navbar-vertical-aside').hsSideNav();
+
+
+            // INITIALIZATION OF TOOLTIP IN NAVBAR VERTICAL MENU
+            // =======================================================
+            $('.js-nav-tooltip-link').tooltip({ boundary: 'window' })
+
+            $(".js-nav-tooltip-link").on("show.bs.tooltip", function (e) {
+                if (!$("body").hasClass("navbar-vertical-aside-mini-mode")) {
+                    return false;
+                }
+            });
+
+
+            // INITIALIZATION OF UNFOLD
+            // =======================================================
+            $('.js-hs-unfold-invoker').each(function () {
+                var unfold = new HSUnfold($(this)).init();
+            });
+
+
+            // INITIALIZATION OF FORM SEARCH
+            // =======================================================
+            $('.js-form-search').each(function () {
+                new HSFormSearch($(this)).init()
+            });
+
+
+            // INITIALIZATION OF NAV SCROLLER
+            // =======================================================
+            $('.js-nav-scroller').each(function () {
+                new HsNavScroller($(this)).init()
+            });
+
+
+            // INITIALIZATION OF SELECT2
+            // =======================================================
+            $('.js-select2-custom').each(function () {
+                var select2 = $.HSCore.components.HSSelect2.init($(this));
+            });
+
+
+            // INITIALIZATION OF DATATABLES
+            // =======================================================
+            var datatable = $.HSCore.components.HSDatatables.init($('#datatable'), {
+                select: {
+                    style: 'multi',
+                    selector: 'td:first-child input[type="checkbox"]',
+                    classMap: {
+                        checkAll: '#datatableCheckAll',
+                        counter: '#datatableCounter',
+                        counterInfo: '#datatableCounterInfo'
+                    }
+                },
+                language: {
+                    zeroRecords: '<div class="text-center p-4">' +
+                        '<img class="mb-3" src="./assets/svg/illustrations/sorry.svg" alt="Image Description" style="width: 7rem;">' +
+                        '<p class="mb-0">No data to show</p>' +
+                        '</div>'
+                }
+            });
+
+            $('.js-datatable-filter').on('change', function () {
+                var $this = $(this),
+                    elVal = $this.val(),
+                    targetColumnIndex = $this.data('target-column-index');
+
+                datatable.column(targetColumnIndex).search(elVal).draw();
+            });
+
+            $('#datatableSearch').on('mouseup', function (e) {
+                var $input = $(this),
+                    oldValue = $input.val();
+
+                if (oldValue == "") return;
+
+                setTimeout(function () {
+                    var newValue = $input.val();
+
+                    if (newValue == "") {
+                        // Gotcha
+                        datatable.search('').draw();
+                    }
+                }, 1);
+            });
+
+            $('#toggleColumn_product').change(function (e) {
+                datatable.columns(1).visible(e.target.checked)
+            })
+
+            $('#toggleColumn_type').change(function (e) {
+                datatable.columns(2).visible(e.target.checked)
+            })
+
+            datatable.columns(3).visible(false)
+
+            $('#toggleColumn_vendor').change(function (e) {
+                datatable.columns(3).visible(e.target.checked)
+            })
+
+            $('#toggleColumn_stocks').change(function (e) {
+                datatable.columns(4).visible(e.target.checked)
+            })
+
+            $('#toggleColumn_sku').change(function (e) {
+                datatable.columns(5).visible(e.target.checked)
+            })
+
+            $('#toggleColumn_price').change(function (e) {
+                datatable.columns(6).visible(e.target.checked)
+            })
+
+            datatable.columns(7).visible(false)
+
+            $('#toggleColumn_quantity').change(function (e) {
+                datatable.columns(7).visible(e.target.checked)
+            })
+
+            $('#toggleColumn_variants').change(function (e) {
+                datatable.columns(8).visible(e.target.checked)
+            })
+
+
+            // INITIALIZATION OF TAGIFY
+            // =======================================================
+            $('.js-tagify').each(function () {
+                var tagify = $.HSCore.components.HSTagify.init($(this));
+            });
+        });
+    </script>
+
+    <!-- IE Support -->
+    <!-- <script>
+    if (/MSIE \d|Trident.*rv:/.test(navigator.userAgent)) document.write('<script src="./assets/vendor/babel-polyfill/polyfill.min.js"><\/script>');
+</script> -->
+</body>
+
+</html>
